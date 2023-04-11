@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [� Table of Contents](#-table-of-contents)
-- [📖 Todo List ](#-todo-list-)
+- [📖 Leaderboard ](#-todo-list-)
 - [🛠 Built With ](#-built-with-)
   - [Tech Stack ](#tech-stack-)
   - [Key Features ](#key-features-)
@@ -33,7 +33,7 @@
 <br>
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Todo List <a id="about-project"></a>
+# 📖 Leaderboard <a id="about-project"></a>
 
 **Leaderboard** is a simple online leaderboard implemented as a web-based app that recalls and shows scores from an external API. There is a capability to add scores to the score board too. The project is implemented using Javascript ES6 and webpack.
 
