@@ -1,5 +1,8 @@
-const loadScores = (scoreList) => {
+import { scoreList } from "../index.js";
+
+const loadScores = () => {
   const scoreEl = document.querySelector('.score-list');
+  scoreEl.textContent = '';
   scoreList.list.forEach((score) => {
     const li = document.createElement('li');
     li.classList.add('score-item');

@@ -26,8 +26,8 @@
       </section>
       <section class="add-score">
         <h2 class="add-score-title">Add your score:</h2>
-        <input type="text" class="score-name-input" placeholder="Your Name">
-        <input type="text" class="score-number-input" placeholder="Your Score">
+        <input type="text" class="score-name-input" placeholder="Your Name" pattern="/^[A-Za-z]{1}[A-Za-z0-9]*/g">
+        <input type="text" class="score-number-input" placeholder="Your Score" type="number">
         <input type="button" name="submit-score" id="submit-score" value="Submit">
       </section>
     </div>

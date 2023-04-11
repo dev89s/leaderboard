@@ -1,14 +1,19 @@
 import './style.css';
 import loadScores from './modules/load-scores.js';
 import ScoreList from './modules/score-list.js';
+import setupListeners from './modules/setup-listeners.js';
+import createMock from './modules/mock-list.js';
 
 const scoreList = new ScoreList();
 const storage = JSON.parse(localStorage.getItem('scores'));
 
+console.log(storage);
 if (!storage) {
-  scoreList.mockList();
+  scoreList.list = createMock();
 } else {
   scoreList.list = storage;
 }
+export {scoreList};
 
-loadScores(scoreList);
+loadScores();
+setupListeners();
