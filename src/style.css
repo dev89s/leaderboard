@@ -1,0 +1,64 @@
+/* ---- General Styling ---- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---- Heading Styling ---- */
+
+h1.title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ---- Leaderboard Styling ---- */
+
+div.board {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+section.recent-score {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+  min-width: 250px;
+  flex-direction: column;
+}
+
+div.score-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+button.refresh {
+  padding: 3px;
+}
+
+ul.score-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  border: 1px solid #000;
+}
+
+li.score-item {
+  padding: 5px;
+}
+
+section.add-score {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#submit-score {
+  align-self: flex-end;
+  padding: 3px;
+}
