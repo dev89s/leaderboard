@@ -1,13 +1,13 @@
 export default class ScoreList {
   constructor() {
     this.list = [];
-  };
+  }
 
   addScore(name, score, index = this.list.length) {
     const scoreOb = {
-      name: name,
-      score: score,
-      index: index,
+      name,
+      score,
+      index,
     };
     this.list.push(scoreOb);
     localStorage.setItem('scores', JSON.stringify(this.list));

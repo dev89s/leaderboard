@@ -1,7 +1,6 @@
-
 const loadScores = (scoreList) => {
   const scoreEl = document.querySelector('.score-list');
-  for (let score of scoreList.list) {
+  scoreList.list.forEach((score) => {
     const li = document.createElement('li');
     li.classList.add('score-item');
     if (score.index % 2 === 1) {
@@ -9,7 +8,7 @@ const loadScores = (scoreList) => {
     }
     li.textContent = `${score.name}: ${score.score}`;
     scoreEl.appendChild(li);
-  } 
-}
+  });
+};
 
 export default loadScores;
