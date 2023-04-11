@@ -13,6 +13,7 @@ const setupListeners = () => {
       addToList(nameInput.value, scoreInput.value, scoreList);
       nameInput.value = '';
       scoreInput.value = '';
+      nameInput.focus();
     } else {
       alert('please enter correct input');
     }
