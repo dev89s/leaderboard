@@ -1,5 +1,4 @@
 const createMock = () => {
-
   const list = [
     {
       name: 'name 1',
@@ -23,6 +22,6 @@ const createMock = () => {
     },
   ];
   return list;
-}
+};
 
 export default createMock;

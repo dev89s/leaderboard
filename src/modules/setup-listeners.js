@@ -1,7 +1,6 @@
 import addToList from './add-to-list.js';
-import { scoreList } from '../index.js';
 
-const setupListeners = () => {
+const setupListeners = (scoreList) => {
   const nameInput = document.querySelector('.score-name-input');
   const scoreInput = document.querySelector('.score-number-input');
   const submit = document.querySelector('#submit-score');
@@ -14,10 +13,8 @@ const setupListeners = () => {
       nameInput.value = '';
       scoreInput.value = '';
       nameInput.focus();
-    } else {
-      alert('please enter correct input');
     }
   });
-}
+};
 
 export default setupListeners;

@@ -7,13 +7,11 @@ import createMock from './modules/mock-list.js';
 const scoreList = new ScoreList();
 const storage = JSON.parse(localStorage.getItem('scores'));
 
-console.log(storage);
 if (!storage) {
   scoreList.list = createMock();
 } else {
   scoreList.list = storage;
 }
-export {scoreList};
 
-loadScores();
-setupListeners();
+loadScores(scoreList);
+setupListeners(scoreList);

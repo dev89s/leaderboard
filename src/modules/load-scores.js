@@ -1,6 +1,4 @@
-import { scoreList } from "../index.js";
-
-const loadScores = () => {
+const loadScores = (scoreList) => {
   const scoreEl = document.querySelector('.score-list');
   scoreEl.textContent = '';
   scoreList.list.forEach((score) => {
