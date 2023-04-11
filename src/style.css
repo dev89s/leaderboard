@@ -66,6 +66,12 @@ section.add-score {
   margin-top: 20px;
 }
 
+.error {
+  display: none;
+  background-color: red;
+  color: #fff;
+}
+
 #submit-score {
   align-self: flex-end;
   padding: 3px;
