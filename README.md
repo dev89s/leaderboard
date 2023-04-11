@@ -190,6 +190,6 @@ I would like to thank Microverse online web development school for providing the
 
 ## 📝 License <a id="license"></a>
 
-This project is [MIT](https://github.com/dev89s/todo-list/blob/leaderboard/LICENCE.md) licensed.
+This project is [MIT](https://github.com/dev89s/leaderboard/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
