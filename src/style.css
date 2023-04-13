@@ -36,21 +36,25 @@ input[type='button']:hover {
 div.background {
   background-image: url(/src/img/fb-background.jpg);
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 div.background-blur {
   backdrop-filter: blur(10px);
-  height: 100vh;
+  height: 100%;
 }
 
 div.header-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1.title {
+  display: flex;
   color: #367f33;
-  min-width: 600px;
-  margin: 0 auto;
   margin-top: 30px;
 }
 
@@ -67,7 +71,6 @@ section.recent-score {
   display: flex;
   gap: 8px;
   margin-top: 20px;
-  min-width: 250px;
   flex-direction: column;
 }
 
@@ -81,6 +84,7 @@ div.score-header {
 h2.score-list-title {
   font-size: 1.7em;
   color: rgb(0, 145, 255);
+  margin-right: 30px;
 }
 
 ul.score-list {
@@ -134,4 +138,20 @@ h2.add-score-title {
 input#submit-score {
   align-self: flex-end;
   font-size: 1em;
+}
+
+/* ---- Mobile view ---- */
+
+@media screen and (max-width: 500px) {
+  div.board {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+
+  h1.title {
+    display: flex;
+    margin: 0;
+    padding: 50px 30px;
+    min-width: 0;
+  }
 }
