@@ -3,20 +3,53 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+li {
+  background-color: #fff;
 }
 
 .grey {
-  background-color: lightgrey;
+  background-color: rgb(205, 240, 255);
+}
+
+button,
+input[type='button'] {
+  font-size: 1.2em;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid green;
+  border-radius: 3px;
+  color: green;
+  cursor: pointer;
+}
+
+button:hover,
+input[type='button']:hover {
+  color: #fff;
+  background-color: green;
 }
 
 /* ---- Heading Styling ---- */
+
+div.background {
+  background-image: url(/src/img/fb-background.jpg);
+  height: 100vh;
+}
+
+div.background-blur {
+  backdrop-filter: blur(10px);
+  height: 100vh;
+}
 
 div.header-container {
   display: flex;
 }
 
 h1.title {
-  min-width: 550px;
+  color: #367f33;
+  min-width: 600px;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -41,11 +74,13 @@ section.recent-score {
 div.score-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 8px;
 }
 
-button.refresh {
-  padding: 3px;
+h2.score-list-title {
+  font-size: 1.7em;
+  color: rgb(0, 145, 255);
 }
 
 ul.score-list {
@@ -53,6 +88,9 @@ ul.score-list {
   flex-direction: column;
   list-style: none;
   border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.2em;
 }
 
 li.score-item {
@@ -66,13 +104,34 @@ section.add-score {
   margin-top: 20px;
 }
 
-.error {
-  display: none;
-  background-color: red;
-  color: #fff;
+h2.add-score-title {
+  color: rgb(0, 145, 255);
+  font-size: 1.7em;
 }
 
-#submit-score {
-  align-self: flex-end;
+.score-input {
+  font-size: 1.2em;
+}
+
+.error {
+  max-height: 0;
+  padding: 0;
+  border-radius: 3px;
+  background-color: rgb(169, 25, 25);
+  color: #fff;
+  opacity: 0;
+  transition-property: max-height, opacity, padding;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.error.show {
+  opacity: 100%;
+  max-height: 2em;
   padding: 3px;
+}
+
+input#submit-score {
+  align-self: flex-end;
+  font-size: 1em;
 }

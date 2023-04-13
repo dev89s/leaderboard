@@ -5,34 +5,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>Leaderboard</title>
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
-      <h1 class="title">Leaderboard</h1>
-    </div>
-  </header>
-  <main>
-    <div class="board">
-      <section class="recent-score">
-        <div class="score-header">
-          <h2>Recent Scores</h2> <button class="refresh">Refresh</button>
+  <div class="background">
+    <div class="background-blur">
+      <header>
+        <div class="header-container">
+          <h1 class="title">Leaderboard</h1>
         </div>
-        <ul class="score-list">
-          <!-- Score List will be displayed here -->
-        </ul>
-      </section>
-      <section class="add-score">
-        <h2 class="add-score-title">Add your score:</h2>
-        <input type="text" class="score-name-input" placeholder="Your Name" pattern="/^[A-Za-z]{1}[A-Za-z0-9]*/g">
-        <input type="text" class="score-number-input" placeholder="Your Score" type="number">
-        <span class="error"></span>
-        <input type="button" name="submit-score" id="submit-score" value="Submit">
-      </section>
+      </header>
+      <main>
+        <div class="board">
+          <section class="recent-score">
+            <div class="score-header">
+              <h2 class="score-list-title">Recent Scores</h2> <button class="refresh">Refresh</button>
+            </div>
+            <ul class="score-list">
+              <!-- Score List will be displayed here -->
+            </ul>
+          </section>
+          <section class="add-score">
+            <h2 class="add-score-title">Add your score:</h2>
+            <input type="text" class="score-name-input score-input" placeholder="Your Name">
+            <input type="text" class="score-number-input score-input" placeholder="Your Score">
+            <span class="error">please enter correct info</span>
+            <input type="button" name="submit-score" id="submit-score" value="Submit">
+          </section>
+        </div>
+      </main>
     </div>
-  </main>
+  </div>
 </body>
 
 </html>

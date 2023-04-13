@@ -3,6 +3,7 @@ import getScores from './get-scores.js';
 import initGame from './init-game.js';
 import loadScores from './load-scores.js';
 import createMock from './mock-list.js';
+import ScoreList from './score-list.js';
 
 const setupListeners = (scoreList) => {
   const nameInput = document.querySelector('.score-name-input');
@@ -20,12 +21,9 @@ const setupListeners = (scoreList) => {
       scoreInput.value = '';
       nameInput.focus();
     } else {
-      error.style.display = 'block';
-      error.textContent = 'please enter correct info';
+      error.classList.toggle('show');
       setTimeout(() => {
-        error.style.display = 'none';
-        nameInput.value = '';
-        scoreInput.value = '';
+        error.classList.toggle('show');
         nameInput.focus();
       }, 3000);
     }
@@ -41,12 +39,9 @@ const setupListeners = (scoreList) => {
         scoreInput.value = '';
         nameInput.focus();
       } else {
-        error.style.display = 'block';
-        error.textContent = 'please enter correct info';
+        error.classList.toggle('show');
         setTimeout(() => {
-          error.style.display = 'none';
-          nameInput.value = '';
-          scoreInput.value = '';
+          error.classList.toggle('show');
           nameInput.focus();
         }, 3000);
       }
@@ -56,6 +51,7 @@ const setupListeners = (scoreList) => {
   refresh.addEventListener('click', () => {
     const reload = async () => {
       initGame();
+      loadScores(new ScoreList());
       const response = await getScores();
       if (response.length !== 0) {
         scoreList.list = [];
