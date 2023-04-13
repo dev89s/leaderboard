@@ -9,31 +9,31 @@
 
 <!-- TABLE OF CONTENTS -->
 
-# 📗 Table of Contents
+# 📗 Table of Contents <a id="table-of-contents"></a>
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 Todo List ](#-todo-list-)
-- [🛠 Built With ](#-built-with-)
-  - [Tech Stack ](#tech-stack-)
-  - [Key Features ](#key-features-)
-- [🚀 Live Demo ](#-live-demo-)
-- [💻 Getting Started ](#-getting-started-)
+- [� Table of Contents](#table-of-contents)
+- [📖 Leaderboard ](#about-project)
+- [🛠 Built With ](#built-with)
+  - [Tech Stack ](#tech-stack)
+  - [Key Features ](#key-features)
+- [🚀 Live Demo ](#live-demo)
+- [💻 Getting Started ](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Usage](#usage)
   - [Deployment](#deployment)
-- [👥 Authors ](#-authors-)
-- [🔭 Future Features ](#-future-features-)
-- [🤝 Contributing ](#-contributing-)
-- [⭐️ Show your support ](#️-show-your-support-)
-- [🙏 Acknowledgments ](#-acknowledgments-)
-- [❓ FAQ (OPTIONAL) ](#-faq-optional-)
-- [📝 License ](#-license-)
+- [👥 Authors ](#authors)
+- [🔭 Future Features ](#future-features)
+- [🤝 Contributing ](#contributing)
+- [⭐️ Show your support ](#️show-your-support)
+- [🙏 Acknowledgments ](#acknowledgements)
+- [❓ FAQ (OPTIONAL) ](#faq)
+- [📝 License ](#license)
 
 <br>
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Todo List <a id="about-project"></a>
+# 📖 Leaderboard <a id="about-project"></a>
 
 **Leaderboard** is a simple online leaderboard implemented as a web-based app that recalls and shows scores from an external API. There is a capability to add scores to the score board too. The project is implemented using Javascript ES6 and webpack.
 
