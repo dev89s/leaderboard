@@ -68,7 +68,7 @@ const setupListeners = (scoreList) => {
     reload();
   });
 
-  refresh.addEventListener('touchstart', () => {
+  refresh.addEventListener('touchstart', (e) => {
     const reload = async () => {
       initGame();
       loadScores(new ScoreList());
@@ -86,6 +86,8 @@ const setupListeners = (scoreList) => {
       loadScores(scoreList);
     };
     reload();
+    const btn = document.querySelector('.refresh');
+    console.log(btn.style);
   });
 };
 export default setupListeners;

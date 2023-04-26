@@ -25,10 +25,12 @@ input[type='button'] {
   cursor: pointer;
 }
 
-button:hover,
-input[type='button']:hover {
-  color: #fff;
-  background-color: green;
+@media (hover: hover) {
+  button:hover,
+  input[type='button']:hover {
+    color: #fff;
+    background-color: green;
+  }
 }
 
 /* ---- Heading Styling ---- */
