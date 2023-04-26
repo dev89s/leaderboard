@@ -33,6 +33,14 @@ input[type='button'] {
   }
 }
 
+@media (hover: none) {
+  button:active,
+  input[type='button']:hover {
+    color: #fff;
+    background-color: green;
+  }
+}
+
 /* ---- Heading Styling ---- */
 
 div.background {
