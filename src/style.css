@@ -35,7 +35,7 @@ input[type='button'] {
 
 @media (hover: none) {
   button:active,
-  input[type='button']:hover {
+  input[type='button']:active {
     color: #fff;
     background-color: green;
   }

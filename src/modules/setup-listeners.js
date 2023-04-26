@@ -86,8 +86,6 @@ const setupListeners = (scoreList) => {
       loadScores(scoreList);
     };
     reload();
-    const btn = document.querySelector('.refresh');
-    console.log(btn.style);
   });
 };
 export default setupListeners;
