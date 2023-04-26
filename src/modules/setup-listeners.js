@@ -67,5 +67,25 @@ const setupListeners = (scoreList) => {
     };
     reload();
   });
+
+  refresh.addEventListener('touchstart', () => {
+    const reload = async () => {
+      initGame();
+      loadScores(new ScoreList());
+      const response = await getScores();
+      if (response.length !== 0) {
+        scoreList.list = [];
+        response.forEach((score) => {
+          scoreList.addScore(score.user, score.score);
+        });
+        localStorage.setItem('scores', JSON.stringify(scoreList.list));
+      } else {
+        scoreList.list = createMock();
+        localStorage.setItem('scores', JSON.stringify(response));
+      }
+      loadScores(scoreList);
+    };
+    reload();
+  });
 };
 export default setupListeners;
