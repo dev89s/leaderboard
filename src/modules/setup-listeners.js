@@ -27,6 +27,9 @@ const setupListeners = (scoreList) => {
         nameInput.focus();
       }, 3000);
     }
+    setTimeout(() => {
+      submit.blur();
+    }, 500);
   });
 
   scoreInput.addEventListener('keypress', (e) => {
