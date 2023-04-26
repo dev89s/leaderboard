@@ -29,23 +29,6 @@ const setupListeners = (scoreList) => {
     }
   });
 
-  submit.addEventListener('touchstart', () => {
-    const nameReg = new RegExp(/^[A-Za-z]{1}[A-Za-z0-9]*/g);
-    const numReg = new RegExp(/^[1-9]{1}[0-9]*/g);
-    if (nameReg.test(nameInput.value) && numReg.test(scoreInput.value)) {
-      addToList(nameInput.value, scoreInput.value, scoreList);
-      nameInput.value = '';
-      scoreInput.value = '';
-      // nameInput.focus();
-    } else {
-      error.classList.toggle('show');
-      setTimeout(() => {
-        error.classList.toggle('show');
-        // nameInput.focus();
-      }, 3000);
-    }
-  });
-
   scoreInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       const nameReg = new RegExp(/^[A-Za-z]{1}[A-Za-z0-9]*/g);
@@ -66,26 +49,6 @@ const setupListeners = (scoreList) => {
   });
 
   refresh.addEventListener('click', () => {
-    const reload = async () => {
-      initGame();
-      loadScores(new ScoreList());
-      const response = await getScores();
-      if (response.length !== 0) {
-        scoreList.list = [];
-        response.forEach((score) => {
-          scoreList.addScore(score.user, score.score);
-        });
-        localStorage.setItem('scores', JSON.stringify(scoreList.list));
-      } else {
-        scoreList.list = createMock();
-        localStorage.setItem('scores', JSON.stringify(response));
-      }
-      loadScores(scoreList);
-    };
-    reload();
-  });
-
-  refresh.addEventListener('touchstart', (e) => {
     const reload = async () => {
       initGame();
       loadScores(new ScoreList());
